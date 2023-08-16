@@ -3,6 +3,7 @@ import React from 'react';
 import store from '../../store/todoStore';
 import styles from './ToDoList.module.css'
 import Form from "../Form/Form";
+import ToDoItem from "../ToDoItem/ToDoItem";
 
 const TodoList: React.FC = observer(() => {
     return (
@@ -10,10 +11,9 @@ const TodoList: React.FC = observer(() => {
             <h1 className={styles.title}>TODO</h1>
             <Form/>
             <ul className={styles.list}>
-                {store.todos.map((item) => {
+                {store.todos?.map((item) => {
                     return (
-                        <li>
-                        </li>
+                        <ToDoItem key={item.id} item={item}/>
                     );
                 })}
             </ul>
