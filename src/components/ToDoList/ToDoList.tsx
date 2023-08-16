@@ -4,6 +4,7 @@ import store from '../../store/todoStore';
 import styles from './ToDoList.module.css'
 import Form from "../Form/Form";
 import ToDoItem from "../ToDoItem/ToDoItem";
+import Counter from "../Counter/Counter";
 
 const TodoList: React.FC = observer(() => {
     return (
@@ -17,6 +18,7 @@ const TodoList: React.FC = observer(() => {
                     );
                 })}
             </ul>
+            <Counter/>
         </section>
     );
 });
