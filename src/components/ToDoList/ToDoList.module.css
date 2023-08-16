@@ -1,0 +1,23 @@
+.todo {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 156px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin: 0 0 60px 20px;
+    align-self: flex-start;
+}
+
+
+
+.list {
+
+}

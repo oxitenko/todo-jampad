@@ -1,15 +1,15 @@
-import { action, computed, makeObservable, observable } from 'mobx';
+import {action, computed, makeObservable, observable} from 'mobx';
 import uniqid from 'uniqid';
 
 
-interface Todo {
+interface ITodo {
     id: string;
     title: string;
     completed: boolean;
 }
 
 class ToDoStore {
-    todos: Todo[] = [];
+    todos: ITodo[] = [];
 
     constructor() {
         makeObservable(this, {
@@ -22,7 +22,7 @@ class ToDoStore {
         });
     }
 
-    addTodo(todo:string) {
+    addTodo(todo: string) {
         this.todos.push({
             id: uniqid(),
             title: todo,
@@ -38,13 +38,13 @@ class ToDoStore {
         return this.todos.length;
     }
 
-    remove(id:string) {
+    remove(id: string) {
         this.todos = this.todos.filter((item) => item.id !== id);
     }
 
-    completedTodo(id:string) {
+    completedTodo(id: string) {
         this.todos = this.todos.map((item) =>
-            item.id === id ? { ...item, completed: !item.completed } : item,
+            item.id === id ? {...item, completed: !item.completed} : item,
         );
     }
 }
