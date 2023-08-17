@@ -6,7 +6,7 @@ import React from "react";
 
 interface IToDoItem {
     item: {
-        id: string,
+        id: string | number,
         title: string,
         completed: boolean
     }

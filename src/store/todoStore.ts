@@ -2,17 +2,19 @@ import {action, computed, makeObservable, observable} from 'mobx';
 import uniqid from 'uniqid';
 
 
-interface ITodo {
-    id: string;
+interface IToDo {
+    userId?: number;
+    id: string | number;
     title: string;
     completed: boolean;
 }
 
 class ToDoStore {
-    todos: ITodo[] = [];
+    todos: IToDo[] = [];
 
     constructor() {
         makeObservable(this, {
+            fetchTodos: action,
             todos: observable,
             totalTodosCount: computed,
             completedTodosCount: computed,
@@ -21,7 +23,9 @@ class ToDoStore {
             completedTodo: action,
         });
     }
-
+    fetchTodos(todo: IToDo[]) {
+        this.todos = todo;
+    }
     addTodo(todo: string) {
         this.todos.push({
             id: uniqid(),
@@ -38,11 +42,11 @@ class ToDoStore {
         return this.todos.length;
     }
 
-    remove(id: string) {
+    remove(id: string | number) {
         this.todos = this.todos.filter((item) => item.id !== id);
     }
 
-    completedTodo(id: string) {
+    completedTodo(id: string | number) {
         this.todos = this.todos.map((item) =>
             item.id === id ? {...item, completed: !item.completed} : item,
         );
