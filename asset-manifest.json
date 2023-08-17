@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-jampad/static/css/main.643ba1f6.css",
+    "main.js": "/todo-jampad/static/js/main.078622fb.js",
+    "index.html": "/todo-jampad/index.html",
+    "static/media/checkbox.svg": "/todo-jampad/static/media/checkbox.de13b5cd9b5c603a0475.svg",
+    "main.643ba1f6.css.map": "/todo-jampad/static/css/main.643ba1f6.css.map",
+    "main.078622fb.js.map": "/todo-jampad/static/js/main.078622fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.643ba1f6.css",
+    "static/js/main.078622fb.js"
+  ]
+}
