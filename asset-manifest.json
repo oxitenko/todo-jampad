@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/todo-jampad/static/css/main.643ba1f6.css",
-    "main.js": "/todo-jampad/static/js/main.078622fb.js",
+    "main.css": "/todo-jampad/static/css/main.3c87ac4e.css",
+    "main.js": "/todo-jampad/static/js/main.cb7fe4a6.js",
     "index.html": "/todo-jampad/index.html",
-    "static/media/checkbox.svg": "/todo-jampad/static/media/checkbox.de13b5cd9b5c603a0475.svg",
-    "main.643ba1f6.css.map": "/todo-jampad/static/css/main.643ba1f6.css.map",
-    "main.078622fb.js.map": "/todo-jampad/static/js/main.078622fb.js.map"
+    "static/media/checkbox.svg": "/todo-jampad/static/media/checkbox.4fb2de35a7343ef6175c.svg",
+    "main.3c87ac4e.css.map": "/todo-jampad/static/css/main.3c87ac4e.css.map",
+    "main.cb7fe4a6.js.map": "/todo-jampad/static/js/main.cb7fe4a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.643ba1f6.css",
-    "static/js/main.078622fb.js"
+    "static/css/main.3c87ac4e.css",
+    "static/js/main.cb7fe4a6.js"
   ]
 }
