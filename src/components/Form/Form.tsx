@@ -8,11 +8,11 @@ const Form: React.FC = observer(() => {
 
     const [values, setValues] = useState<string>('');
 
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setValues(e.target.value);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent): void => {
         e.preventDefault();
         store.addTodo(values);
         setValues('');

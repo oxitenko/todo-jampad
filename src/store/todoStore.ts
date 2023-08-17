@@ -2,7 +2,7 @@ import {action, computed, makeObservable, observable} from 'mobx';
 import uniqid from 'uniqid';
 
 
-interface IToDo {
+export interface IToDo {
     userId?: number;
     id: string | number;
     title: string;
@@ -11,6 +11,7 @@ interface IToDo {
 
 class ToDoStore {
     todos: IToDo[] = [];
+
 
     constructor() {
         makeObservable(this, {

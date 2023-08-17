@@ -7,12 +7,17 @@ import ToDoItem from "../ToDoItem/ToDoItem";
 import Counter from "../Counter/Counter";
 import {fetchData} from "../../api/api";
 import Loader from "../Loader/Loader";
+import Filter from "../Filter/Filter";
+import {IToDo} from "../../store/todoStore";
 
 const TodoList: React.FC = observer(() => {
 
     const [status, setStatus] = useState<'idle' | 'loading' | 'error' | 'success'>('idle');
     const [error, setError] = useState<string | null>(null);
-    const getTodos = async () => {
+    const [currentFilter, setCurrentFilter] = useState<string>('all');
+
+    // Получаем тудушки с сервера
+    const getTodos = async (): Promise<void> => {
         setStatus("loading")
         try {
             const data = await fetchData();
@@ -23,10 +28,28 @@ const TodoList: React.FC = observer(() => {
             setError(`Error: ${e}`)
         }
     }
-
     useEffect(() => {
         getTodos()
     }, []);
+
+    // Фильтруем тудушки по типу
+    function filterToDo(type: string, todos: IToDo[]):IToDo[] {
+        switch (type) {
+            case "all":
+               return todos
+            case "active":
+               return todos.filter(item => !item.completed);
+            case "completed":
+               return todos.filter(item => item.completed);
+            default:
+                return todos
+        }
+    }
+
+    // Меняем состояние фильтра
+    const handleFilterChange = (filter: string) => {
+        setCurrentFilter(filter);
+    }
 
     return (
         <section className={styles.todo}>
@@ -36,13 +59,14 @@ const TodoList: React.FC = observer(() => {
                 {status === 'loading' && <Loader/>}
                 {status === 'error' && <p className={styles.error}>{error}</p>}
                 {status === "success" &&
-                    store.todos?.map((item) => {
+                   filterToDo(currentFilter, store?.todos).map((item) => {
                         return (
                             <ToDoItem key={item.id} item={item}/>
                         );
                     })}
             </ul>
             <Counter/>
+            <Filter currentFilter={currentFilter} onFilterChange={handleFilterChange} />
         </section>
     );
 });
