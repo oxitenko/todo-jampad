@@ -9,23 +9,23 @@
 
 .title {
     font-weight: 400;
-    font-size: 96px;
-    line-height: 156px;
+    font-size: 92px;
+    line-height: 100px;
     letter-spacing: 0.1em;
     color: #ffffff;
-    margin: 0 0 60px 20px;
+    margin: 0 0 20px 20px;
     align-self: flex-start;
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    width: 755px;
+    width: 666px;
     max-width: 100%;
     background-color: #25273c;
     row-gap: 10px;
-    margin-top: 60px;
-    height: 660px;
+    margin-top: 40px;
+    height: 400px;
     overflow-y: auto;
 }
 
@@ -40,6 +40,6 @@
     align-items: center;
     justify-content: center;
     color: #E94560;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 28px;
 }

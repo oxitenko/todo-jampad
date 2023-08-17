@@ -40,7 +40,7 @@ const ToDoItem = observer(({item}: IToDoItem) => {
             >
                 <AiOutlineCloseCircle
                     color="white"
-                    fontSize={35}
+                    fontSize={20}
                     cursor="pointer"
                 />
             </button>

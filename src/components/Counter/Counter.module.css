@@ -1,16 +1,16 @@
 .counter {
     display: flex;
-    width: 755px;
+    width: 662px;
     max-width: 100%;
     flex-direction: column;
     border: 2px solid #ad02fe;
     background-color: #25273c;
-    row-gap: 20px;
+    row-gap: 10px;
 }
 
 .text {
-    font-size: 24px;
-    line-height: 39px;
+    font-size: 20px;
+    line-height: 24px;
     letter-spacing: 0.1em;
     color: #ffffff;
     margin: 0;

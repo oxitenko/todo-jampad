@@ -5,15 +5,15 @@
 
 .input {
     background-color: #25273c;
-    width: 656.58px;
+    width: 588.58px;
     height: 68.56px;
     border-radius: 30px;
     border: 0;
     font-family: 'Monda', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 59px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.7);
     padding-left: 20px;
@@ -23,8 +23,8 @@
     font-family: 'Monda', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 59px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.7);
 }

@@ -1,23 +1,23 @@
 .filters {
     position: absolute;
     background-color: #25273c;
-    width: 200px;
-    height: 200px;
-    left: 8%;
-    top: 31%;
+    width: 150px;
+    height: 150px;
+    left: 14%;
+    top: 33%;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 15px 15px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     cursor: pointer;
 }
 
 .filter {
     color: #fff;
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 .filter:hover {
