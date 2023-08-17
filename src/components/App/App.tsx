@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import TodoList from "../ToDoList/ToDoList";
 
 function App() {
