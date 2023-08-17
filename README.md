@@ -1,6 +1,6 @@
 # Тестовое задание Frontend в Jampad
 
-Ссылка стенд: 
+Ссылка стенд: https://oxitenko.github.io/todo-jampad/
 
 #
 
