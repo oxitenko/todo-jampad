@@ -1,26 +1,40 @@
 import styles from './Filter.module.css';
+import clsx from 'clsx';
 
 interface IFilter {
-    currentFilter: string;
-    onFilterChange: (filter: string) => void;
+  currentFilter: string;
+  onFilterChange: (filter: string) => void;
 }
 
-const Filter = ({currentFilter, onFilterChange}: IFilter) => {
-    return (
-        <div className={styles.filters}>
-            <p
-                onClick={() => onFilterChange("all")}
-                className={currentFilter === "all" ? `${styles.filter} ${styles.active}` : styles.filter}
-            >All</p>
-            <p onClick={() => onFilterChange("active")}
-               className={currentFilter === "active" ? `${styles.filter} ${styles.active}` : styles.filter}
-            >Active</p>
-            <p
-                onClick={() => onFilterChange("completed")}
-                className={currentFilter === "completed" ? `${styles.filter} ${styles.active}` : styles.filter}
-            >Completed</p>
-        </div>
-    );
+const Filter = ({ currentFilter, onFilterChange }: IFilter) => {
+  return (
+    <div className={styles.filters}>
+      <p
+        onClick={() => onFilterChange('all')}
+        className={clsx(styles.filter, {
+          [styles.active]: currentFilter === 'all',
+        })}
+      >
+        All
+      </p>
+      <p
+        onClick={() => onFilterChange('active')}
+        className={clsx(styles.filter, {
+          [styles.active]: currentFilter === 'all',
+        })}
+      >
+        Active
+      </p>
+      <p
+        onClick={() => onFilterChange('completed')}
+        className={clsx(styles.filter, {
+          [styles.active]: currentFilter === 'all',
+        })}
+      >
+        Completed
+      </p>
+    </div>
+  );
 };
 
 export default Filter;
