@@ -20,7 +20,7 @@ const Filter = ({ currentFilter, onFilterChange }: IFilter) => {
       <p
         onClick={() => onFilterChange('active')}
         className={clsx(styles.filter, {
-          [styles.active]: currentFilter === 'all',
+          [styles.active]: currentFilter === 'active',
         })}
       >
         Active
@@ -28,7 +28,7 @@ const Filter = ({ currentFilter, onFilterChange }: IFilter) => {
       <p
         onClick={() => onFilterChange('completed')}
         className={clsx(styles.filter, {
-          [styles.active]: currentFilter === 'all',
+          [styles.active]: currentFilter === 'completed',
         })}
       >
         Completed
